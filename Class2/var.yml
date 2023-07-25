@@ -1,0 +1,8 @@
+- hosts: all
+  vars:
+    name: Gigi
+    team: Dev
+    company: Google
+  tasks:
+  - debug: msg="Hello {{ name }}, you are a {{ team }}, you work for {{ company }}"
+  
