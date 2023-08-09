@@ -1,0 +1,24 @@
+- hosts: master
+  tasks:
+  - hostname:
+      name: saturday
+
+- hosts: worker1
+  tasks:
+  - hostname:
+      name: sunday
+
+- hosts: aws
+  become: true
+  tasks:
+  - hostname:
+      name: kaizen
+     
+- hosts: gcp    
+  become: true
+  tasks:
+  - hostname:
+      name: kaizen     
+
+
+# Task to change hostname to saturday to master and sunday to worker1 VM
